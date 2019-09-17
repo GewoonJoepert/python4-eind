@@ -9,9 +9,16 @@ def start_menu():
     print("     Type L om de lijst te laten zien")
     print("     Type Q om af te sluiten")
     print("=-="*11)
-    
+
 def main():
     start_menu()
+    programma =  True
+    while programma:
+        keuze =  input("Wat is je keuze? ").lower()
+        if keuze == "q":
+            programma = False
+            os.system('cls')
+
 
 if __name__ == "__main__":
     main()
