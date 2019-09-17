@@ -1,10 +1,15 @@
-import os
+import os, time
 
 def start_menu():
-    print("=-="*15)
-    print("welkom")
-    print("=-="*15)
-
+    naam = input("Hoe heet je? ")
+    print("=-="*11)
+    print("Welkom " + naam + " bij mijn overhoor programma!")
+    print("     Type D om door te gaan")
+    print("     Type R om iets weg te halen")
+    print("     Type L om de lijst te laten zien")
+    print("     Type Q om af te sluiten")
+    print("=-="*11)
+    
 def main():
     start_menu()
 
