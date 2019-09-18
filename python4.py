@@ -18,10 +18,25 @@ def engels_lijst(engels):
 def duits_lijst(duits):
     for key, value in duits.items():
         print(key + " - " + value)
+
 def frans_lijst(frans):
     for key, value in frans.items():
         print(key + " - " + value)
 
+def voeg_engels_woord_toe(engels):
+    woord = input("type een woord in ")
+    vertaling = input("voer de vertaling in ")
+    engels[woord] = vertaling
+
+def voeg_frans_woord_toe(frans):
+    woord1 = input("type een woord in ")
+    vertaling1 = input("voer de vertaling in ")
+    frans[woord1] = vertaling1
+
+def voeg_duits_woord_toe(duits):
+    woord2 = input("type een woord in ")
+    vertaling2 = input("voer de vertaling in ")
+    duits[woord2] = vertaling2
 
 def main():
     engels = {"apple": "appel"}
@@ -46,11 +61,11 @@ def main():
             else:
                 print("Kies een van de aangegeven woordenlijsten")
 
-        if keuze == "q":
+        elif keuze == "q":
             programma = False
             os.system('cls')
 
-        if keuze == "l":
+        elif keuze == "l":
             print("=-="*6)
             print("Engelse lijst:")
             print("")
@@ -67,9 +82,22 @@ def main():
             duits_lijst(duits)
             print("=-="*6)
 
+        elif keuze == "t":
+            keuze_t = input("aan welke lijst wil je een vertaling toevoegen? kies uit: en-nl, du-nl, fr-nl ")
+            if keuze_t == "en-nl":
+                voeg_engels_woord_toe(engels)
+                engels_lijst(engels)
+            elif keuze-t == "fr-nl":
+                    voeg_frans_woord_toe(frans)
+                    frans_lijst(frans)
+            elif keuze_t == "du-nl":
+                    voeg_duits_woord_toe(duits)
+                    duits_lijst(duits)
+            else:
+                print("voer een van de aangegeven lijsten in")
+
         else:
             print("voer een van de aangegeven letters in!")
-
 
 
 if __name__ == "__main__":
