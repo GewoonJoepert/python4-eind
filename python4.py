@@ -11,7 +11,22 @@ def start_menu():
     print("     Type Q om af te sluiten")
     print("=-="*11)
 
+def engels_lijst(engels):
+    for key, value in engels.items():
+        print(key + " - " + value)
+
+def duits_lijst(duits):
+    for key, value in duits.items():
+        print(key + " - " + value)
+def frans_lijst(frans):
+    for key, value in frans.items():
+        print(key + " - " + value)
+
+
 def main():
+    engels = {"apple": "appel"}
+    frans = {"pommes": "patat"}
+    duits = {"nein": "nee"}
     start_menu()
     programma =  True
     while programma:
@@ -20,7 +35,7 @@ def main():
         if keuze == "o":
             welke_o = input("welke woordenlijst wil je overhoord hebben ")
             if welke_o == "en-nl":
-                print("3")
+                print("1")
             elif welke_o == "du-nl":
                     print("2")
             elif welke_o == "fr-nl":
@@ -36,8 +51,21 @@ def main():
             os.system('cls')
 
         if keuze == "l":
-            for key, value in woordlijsten.items():
-                print(key + " - " + value)
+            print("=-="*6)
+            print("Engelse lijst:")
+            print("")
+            engels_lijst(engels)
+            print("=-="*6)
+
+            print("Franse lijst:")
+            print("")
+            frans_lijst(frans)
+            print("=-="*6)
+
+            print("Duitse lijst:")
+            print("")
+            duits_lijst(duits)
+            print("=-="*6)
 
         else:
             print("voer een van de aangegeven letters in!")
