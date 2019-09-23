@@ -82,6 +82,7 @@ def main():
                 print_woordenlijst(duits)
             else:
                 print("voer een van de aangegeven lijsten in")
+                time.sleep(2)
                 os.system('cls')
 
         elif keuze == "r":
@@ -100,9 +101,13 @@ def main():
                 print_woordenlijst(frans)
             else:
                 print("voer een van de aangegeven lijsten in")
+                time.sleep(2)
                 os.system('cls')
 
         else:
             print("voer een van de aangegeven letters in!")
+            time.sleep(2)
+            os.system('cls')
+
 if __name__ == "__main__":
     main()
